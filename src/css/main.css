@@ -15,7 +15,7 @@
 
 .banner {
     background-color: rgba(0, 0, 0, .6) !important;
-    background: url('/src/img/U.jpg') no-repeat center -280px;
+    background: url('../img/U.jpg') no-repeat center -280px;
     background-size: cover;
     background-blend-mode: multiply;
 }

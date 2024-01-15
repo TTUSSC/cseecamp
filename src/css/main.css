@@ -15,7 +15,7 @@
 
 .banner {
     background-color: rgba(0, 0, 0, .6) !important;
-    background: url('https://ttussc.github.io/cseecamp/src/img/U.jpg') no-repeat center -280px;
+    background: url('https://ttussc.github.io/cseecamp/src/img/U.jpg') no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
 }

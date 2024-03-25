@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans+TC:wght@100&display=swap');
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
 
-.fixed {
-    position: fixed;
-}
-
-.fixed-bottom {
-    position: fixed;
-    bottom: 0px;
-}
 .title {
     font-family: 'Hina Mincho', serif !important;
     font-weight: normal !important;
@@ -18,7 +11,14 @@
     background: url('https://ttussc.github.io/cseecamp/src/img/U.jpg') no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
+    
 }
+
+.banner > .hero-body > p {
+    color: white !important;
+}
+
+
 
 .image {
     overflow: hidden;
@@ -26,5 +26,14 @@
 
 .mark {
     box-shadow: inset 0 -8px 0 0 #ffeb6a;
-    color: black;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+}
+
+.footer {
+    margin-top: auto !important;
 }

@@ -3,12 +3,12 @@
 
 .title {
     font-family: 'Hina Mincho', serif !important;
-    font-weight: normal !important;
+    font-weight: bold !important;
 }
 
 .banner {
     background-color: rgba(0, 0, 0, .6) !important;
-    background: url('https://ttussc.github.io/cseecamp/src/img/U.jpg') no-repeat center;
+    background: url('https://ttussc.github.io/cseecamp/src/img/useless_box_sample.jpg') no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
     

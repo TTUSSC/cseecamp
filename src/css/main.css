@@ -42,6 +42,6 @@ body {
 }
 
 .mark {
-  box-shadow: inset 0 -8px 0 0 #B8E1FF;
+  box-shadow: inset 0 -10px 0 0 #B8E1FF;
   font-weight:bold;
 }

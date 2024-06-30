@@ -3,6 +3,9 @@
 #define SW_PIN 8
 #define INIT_DEG 10
 #define UP_DEG 110
+#define MID_DEG 90
+
+#define MIN_TIME 2
 
 // global variable
 Servo serv;
@@ -77,13 +80,13 @@ void reset_action(int down_time, int reset_deg) {
   // down action
   debug_delay("#", "DOWN", down_time);
   while (deg > reset_deg) {
-    if(digitalRead(SW_PIN) == HIGH && deg < 90) {
+    if(digitalRead(SW_PIN) == HIGH && deg < MID_DEG) {
       debug_message("!", "Switch Interrupt.");
       return;
     }
     serv.write(--deg);
     if (is_nomad || over_turn) {
-      down_time = 2;
+      down_time = MIN_TIME;
     }
 
     delay(down_time);
@@ -96,13 +99,13 @@ void loop() {
   ////////////////////////////// INITIALIZE ZONE //////////////////////////////
   // normal setting
   // delay with some magic number
-  int down_time = random(2, 20);
-  int up_time = random(2, 7);
+  int down_time = random(MIN_TIME, 20);
+  int up_time = random(MIN_TIME, 7);
   int stop_time = random(20, 1000);
   int wait_time = random(20, 2000);
   // nomad setting
   int nomad_condition = random(5,10);
-  int nomad_time = random(2,8);
+  int nomad_time = random(MIN_TIME,8);
 
   over_turn = 0;
   /////////////////////////////////////////////////////////////////////////////
@@ -131,8 +134,8 @@ void loop() {
       // nomad mode
       for (int i = 0; i < nomad_time; i++) {
         // nomad with some magic degree and delay
-        pull_action(0, 2, 0, 130);
-        reset_action(2, 80);
+        pull_action(0, MIN_TIME, 0, UP_DEG + 20);
+        reset_action(MIN_TIME, MID_DEG - 10);
       }
       is_nomad = 0;
 
